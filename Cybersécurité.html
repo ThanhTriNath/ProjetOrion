@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="CyberSécurité">
+    <meta name="author" content="Projet Orion">
+    <title>CyberCafé
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Trebuchet MS';
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #18beab;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #18beab;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-family: Roboto;
+        }
+        h3 {
+            color: #18beab;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-family: Roboto;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            font-family: Roboto;
+        }
+        button {
+                border: solid;
+                background: red;
+                border-radius: 20px;
+                padding: 20px;
+                color: #fff;
+                font-weight: black;
+                font-size: 35px;
+                text-transform: uppercase;
+    }
+        .Legende {
+            text-align: center;
+            color: black;
+            font-size: 25px;
+            font-family: Times New Roman;
+        }
+
+        .services, .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service, .testimonial {
+            background-color: #f9f9f9;
+            border: 5px solid #ddd;
+            padding: 20px;
+            width: 48%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service h3, .testimonial h3 {
+            color: #00796b;
+            font-size: 20px;
+        }
+
+        .contact-form {
+            background-color: #00796b;
+            padding: 30px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form button {
+            background-color: #004d40;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CyberCafé</h1>
+        <p>Protégez votre entreprise contre les menaces numériques !</p>
+	<br/>
+    </header>
+    <section>
+	<p style="text-align:center;font-size:20px;">
+        <a href="#Bienvenue">Bienvenue</a> |
+		<a href="#Equipe Orion"> A propos de l'équipe Orion </a> |
+        <a href="#Galerie">Galerie</a> |
+        <a href="#Services"> Services </a> |
+		<a href="#Témoignages"> Témoignages </a> |
+        <a href="#Formations"> Formations </a> |
+        <a href="#Langages de programmation"> Infos programmation </a> |
+	</p>
+    </section>
+    <section id="Bienvenue">
+        <button onclick ="alert('Bienvenue sur notre site Le CyberCafé ! Ici, programmation et informatique sont de mise !!! :-D');" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=350 px>Bienvenue</button>
+    </section>
+
+    <section>
+        <h2 id="Equipe Orion">À propos de l'équipe Orion</h2>
+        <p>
+            Notre équipe de Cyber combattants essaie de lutter tant bien que mal contre les cyber attaques. Nous utilisons le Java, le C++, nous avons un combattant spécialisé en Python 3 et des connaissances en HTML 5 ! </p>
+        </p>
+    </section>
+
+    <section>
+        <h2 id="Galerie">Galerie du projet</h2>
+        <img src="Orion.jpg" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=350 px/>
+        <p class="Legende"><u>Voici le design du logo de notre projet</u></p>
+        <br/>
+        <br/>
+        <img src="Design Orion.jpg" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=350 px/>
+        <p class="Legende"><u>Notre équipe se réunit autour d'un logo, celui ci-dessus !</u></p>
+        <br/>
+        <br/>
+        <img src="Langages_de_programmation_CyberSécurité.jpg" style="display:block;margin-left: auto; margin-right: auto; border-style: solid;" width=1000 px/>
+        <p class="Legende"><u>Voici les principaux langages que nous apprenons pour pratiquer la CyberSécurité.</u></p>
+    </section>
+
+    <section>
+        <h2 id="Services">Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Audit de sécurité</h3>
+                <p>
+                    Notre équipe de Cyber combattants font une évaluation complète de la sécurité de vos systèmes d'information afin d'identifier les vulnérabilités et
+                    proposer des solutions adaptées.
+                </p>
+            </div>
+            <div class="service">
+                <h3>Conseils pour la sécurité sur l'Internet</h3>
+                <p>
+                    Notre équipe consulte aussi pour donner des conseils aux gens pour se protéger lorsqu'ils naviguent dans l'Internet. Nous leur proposons des solutions pour qu'ils aient le plus de chance possible d'être en toute sécurité sur le web.
+                </p>
+            </div>
+            <div class="service">
+                <h3>Formation en cybersécurité</h3>
+                <p>
+                    Sensibilisation et formation de vos équipes aux bonnes pratiques de cybersécurité pour réduire les risques
+                    internes et améliorer la culture de la sécurité.
+                </p>
+            </div>
+            <div class="service">
+                <h3>Protection des données</h3>
+                <p>
+                    Mise en place de solutions de chiffrement et de gestion des accès pour protéger les informations sensibles
+                    et garantir la conformité aux réglementations.
+                </p>
+            </div>
+            <div class="service">
+                <h3>Réponse aux incidents</h3>
+                <p>
+                    Assistance en cas d'incident de sécurité avec des processus d'intervention pour limiter les dommages
+                    et restaurer les services affectés.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 id="Témoignages">Témoignages</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <h3>Adrien D - Responsable JavaScript et C++</h3>
+                <p>Grâce à l'expertise de ce consultant, nous avons pu apprendre de nouvelles manière de contrer les cyber-attaques. Il sait faire de JavaScript et du C++.
+                </p>
+            </div>
+            <div class="testimonial">
+                <h3>Adrien L - Responsable Python 3 et formations</h3>
+                <p>Les formations en cybersécurité ont été extrêmement bénéfiques pour nos équipes. Nous nous sentons beaucoup
+                    plus confiants face aux menaces actuelles. C'est notre responsable en Python à qui nous avons assigné la charge de former les nouvelles recrues. Un travail difficile qu'il exécute très aisément ! 
+                </p>
+            </div>
+             <div class="testimonial">
+                <h3>Nathan L - Responsable Programmation Web</h3>
+                <p>Ce consultant s'est spécialisé dans le code HTML 5 pour vérifier les failles d'une page web. Il praitque le JavaScript, le CSS et un peu le Python 3 ! C'est lui qui est en charge de l'entretien de la page web !
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 id="Formations">Formations</h2>
+         <div class="testimonial">
+                <h3>Flavio M - Stagiaire</h3>
+                <p>Cela ne fait pas longtemps que nous avons accueilli dans notre équipe, une nouvelle recrue, Flavio Mancini. Il est ici pour se former à des langages de programmation basiques et aux relations intérieurs et extérieurs. Il est fasciné par ce qu'il fait. Vous aussi, venez nous rejoindre !
+                </p>
+        </div>
+        <div class="testimonial">
+                <h3>Mathieu M - Stagiaire</h3>
+                <p>Nous avons aussi recruté Mathieu Marcotte, désireux d'apprendre à se former à la programmation. Il s'initie au Python et fait de la communication. Il aime toujours en savoir plus. Venez avec nous vous former aux langages de programmation! 
+                </p>
+        </div>
+    </section>
+    <section>
+        <h2 id="Langages de programmation">Les langages de programmation dont vous entendrez sûrement parler</h2>
+        <div class="testimonial">
+                <h3><u>Python</u></h3>
+                <p> Python est un langage de programmation interprété, multiparadigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet. Il est doté d'un typage dynamique fort, d'une gestion automatique de la mémoire par ramasse-miettes et d'un système de gestion d'exceptions ; il est ainsi similaire à Perl, Ruby, Scheme, Smalltalk et Tcl. Nous sommes aujourd'hui à la troisième version de Python. Nous utilisons Python pour différents aspects clés de de la CyberSécurité.
+                    <br/>
+                    Petite information : Ne pas utiliser le Python 2, car, certaines fonctions sont défectueuses.
+                    Pour plus d'info, vous pouvez consulter le site : 
+                    <a href="https://fr.wikipedia.org/wiki/Python_(langage)">https://fr.wikipedia.org/wiki/Python_(langage)</a>
+                </p>
+        </div>
+        <div class="testimonial">
+                <h3><u>C++</u></h3>
+                <p> C++ est un langage de programmation qui est l'un des plus utilisé de nos jours. Il est compilé. Pour écrire un tel programme, il faut commencer par écrire un ou plusieurs fichiers source. Ensuite, il faut compiler ces fichiers source grâce à un programme appelé compilateur afin d'obtenir un programme exécutable. Cette phase s'appelle la compilation. Les fichiers source sont des fichiers texte lisibles dont le nom se termine en général par .c, .cpp ou .h. Les fichiers exécutables portent en général l'extension .exe sous windows et ne portent pas d'extension sous Linux. Il existe de très nombreux compilateurs : on peut citer par exemple Visual C++ (de microsoft), C++ Builder (de Borland), ou encore gcc qui est un excellent compilateur libre. Le langage C est un langage de programmation inventé par MM. Kernighan et Ritchie au début des années 70. Au début des années 90, Bjarne Stroustrup fait évoluer le langage vers le langage C++ en lui rajoutant notamment les notions orientées objet. Toutefois, bien que le C++ ait évolué à partir du C, et ait gardé un grand nombre de notions et de syntaxes de son «ancêtre», il s'agit de deux langages différents !
+                    Vous pouez consulter le site : 
+                    <a href="https://fr.wikipedia.org/wiki/C%2B%2B">https://fr.wikipedia.org/wiki/C%2B%2B</a>
+             </p>
+        </div>
+    <div class="testimonial">
+                <h3><u>HTML 5</u></h3>
+                <p> Le HTML ou Hyper Text Markup Language de son vrai nom est un langage de programmation dit "Balise". Il sert à éditer des pages web. Il en est actuellement à sa 5ème version. Cette page web est crée en HTML. En cybersécurité, il sert à trouver les failles dans une page web. Ce n'est pas un langage de programmation ! Mais, des langages de programmation tels que le PHP ou le Python peuvent créer des pages web en générant du HTML.
+                    Vous pouvez consulter la page wikipedia : 
+                    <a href="https://fr.wikipedia.org/wiki/HTML5">https://fr.wikipedia.org/wiki/HTML5</a>
+             </p>
+        </div>
+        <div class="testimonial">
+                <h3><u>JavaScript</u></h3>
+                <p> JavaScript est un langage de programmation utilisé principalement pour rendre les pages web interactives. Il est exécuté côté client (dans le navigateur web), mais il peut aussi être exécuté côté serveur (par exemple, avec Node.js).
+Voici quelques concepts clés à connaître :
+<li>Variables : Stocke des valeurs.</li>
+<li>Fonctions : Bloques de code réutilisables.</li>
+<li>Conditions : Pour effectuer des actions basées sur des tests (comme if).</li>
+<li>Boucles : Pour répéter des actions plusieurs fois (for, while).</li>
+<li>Objets : Structures de données qui contiennent des propriétés et des méthodes.</li>
+                    Pour plus d'info, consulter la page : 
+                    <a href="https://fr.wikipedia.org/wiki/JavaScript">https://fr.wikipedia.org/wiki/JavaScript</a>
+             </p>
+        </div>
+      <div class="testimonial">
+        <h3><u>PHP</u></h3>
+        <p> PHP est un langage de script HTML exécuté du côté du serveur. Il veut dire « PHP : Hypertext Preprocessor ». Sa syntaxe est largement inspirée du langage C, de Java et de Perl, avec des améliorations spécifiques. Le but du langage est d'écrire rapidement des pages HTML dynamiques. Une page php porte l'extension « .php ». Une page PHP peut être entièrement programmée en PHP ou mélangée avec du code html. PHP est un langage « Embedded HTML », c'est à dire qu'il apparaît à n'importe quel endroit de la page HTML. Pour ça on le place dans des balises particulières : <?php et ?>. On peut aussi utiliser les balises <script language="php"> et </script>. La première forme est préférable pour plus de simplicité et une compatibilité XHTML. On écrit donc une page HTML dans laquelle on intègre du code PHP.
+            Pour plus d'info, consulter le site : 
+            <a href="https://fr.wikipedia.org/wiki/PHP">https://fr.wikipedia.org/wiki/PHP</a>
+             </p>
+        </div>
+        <div class="testimonial">
+            <h3><u>Java</u></h3>
+            <p> Le Java c'est : 
+<li>Un langage : Orienté objet fortement typé avec classes</li>
+<li>Un environnement d’exécution (JRE) : Une machine virtuelle et un ensemble de bibliothèques</li>
+<li>Un environnement de développement (JDK) : Une machine virtuelle et un ensemble d’outils</li>
+<li>Une mascotte : Duke</li>
+            <br/>
+C'est qui Java ? 
+La plate-forme et le langage Java sont issus d’un projet de
+Sun Microsystems datant de 1990.
+Généralement, on attribut sa paternité a trois de ses ingénieurs :
+<li>James Gosling</li>
+<li>Patrick Naughton</li>
+<li>Mike Sheridan</li>
+            Pour plus d'info, consulter la page : 
+            <a href="https://fr.wikipedia.org/wiki/Java_(langage)">https://fr.wikipedia.org/wiki/Java_(langage)</a>
+            </p>
+        </div>
+        <div class="testimonial">
+        <h3><u>Portail de la programmation</u></h3>
+        <p> Si vous vous intérressez à la programmation, vous pouvez consulter le portail de la programmation : 
+            <a href="https://fr.wikipedia.org/wiki/Portail:Programmation_informatique">https://fr.wikipedia.org/wiki/Portail:Programmation_informatique</a>
+             </p>
+        </div>
+            
+    </section>
+    
+    <section>
+       
+    <footer>
+        <p>&copy; 2025 Consultant Cybersécurité | Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>
