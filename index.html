@@ -14,6 +14,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="Orion1.jpg" type="image/jpeg">
     <style>
+	#liste-liens {
+            display: none; /* Masqué par défaut */
+            margin-top: 10px;
+        }
+        .btn-afficher {
+            border: none;
+            background: #18beab;
+            color: #fff;
+            padding: 10px 16px;
+            font-size: 1em;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+	
         body {
             font-family: 'Trebuchet MS', sans-serif;
             margin: 0;
@@ -222,17 +236,30 @@
 	<br/>
     </header>
     <section>
-	<p style="text-align:center;font-size:20px;">
+	  <button class="btn-afficher" onclick="toggleLiens()">Afficher les liens</button>
+    <div id="liste-liens">
         <a href="#Bienvenue">Bienvenue</a> |
-	<a href="#Equipe Orion"> A propos de l'équipe Orion </a> |
-        <a href="#Galerie">Galerie</a> |
+       <a href="#Equipe Orion"> A propos de l'équipe Orion </a> |
+	<a href="#Galerie">Galerie</a> |
         <a href="#Services"> Services </a> |
 	<a href="#Témoignages"> Acteurs du projet </a> |
         <a href="#Formations"> Formations </a> |
         <a href="#Langages de programmation"> Infos programmation </a> |
 	<a href="#ContactUs"> Contactez-nous </a> |
 	<a href="#Annonces"> Rubrique annonce </a> |
-	</p>
+       
+    </div>
+
+    <script>
+        function toggleLiens() {
+            const liens = document.getElementById('liste-liens');
+            if (liens.style.display === 'none' || liens.style.display === '') {
+                liens.style.display = 'block';
+            } else {
+                liens.style.display = 'none';
+            }
+        }
+    </script>
     </section>
     <section id="Bienvenue">
         <button onclick ="alert('Bienvenue sur notre site Le CyberCafé ! Ici, programmation et informatique sont de mise !!! :-D');" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=350 px>Bienvenue</button>
