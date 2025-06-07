@@ -447,6 +447,49 @@ Généralement, on attribut sa paternité a trois de ses ingénieurs :
       <footer>
         <p>2025 Consultant Cybersécurité | Tous droits réservés</p>
     </footer>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideMenu = document.getElementById('side-menu');
+        const overlay = document.getElementById('menu-overlay');
 
+        function openMenu() {
+            sideMenu.classList.add('open');
+            overlay.classList.add('open');
+        }
+        function closeMenu() {
+            sideMenu.classList.remove('open');
+            overlay.classList.remove('open');
+        }
+        menuToggle.addEventListener('click', openMenu);
+        overlay.addEventListener('click', closeMenu);
+        // Ferme le menu si on clique sur un lien du menu
+        sideMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        // Accessibilité : touche ESC pour fermer le menu
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeMenu();
+        });
+    </script>
+    <!-- Bouton retour en haut -->
+<button id="topBtn" title="Retour en haut" style="display:none;position:fixed;bottom:40px;right:40px;z-index:99;font-size:24px;padding:10px 15px;border:none;border-radius:50%;background:#222;color:#fff;cursor:pointer;">
+    &#8679;
+    <script>
+  // Afficher le bouton quand on descend
+  window.onscroll = function() {
+    const btn = document.getElementById("topBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Remonter en haut quand on clique
+  document.getElementById("topBtn").onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
+</script>
+</button>
 </body>
 </html>
