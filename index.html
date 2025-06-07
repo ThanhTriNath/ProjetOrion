@@ -218,6 +218,34 @@
             p {
                 font-size: 0.8em;
             }
+	      #menu {
+      display: none;
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+    #menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #menu ul li {
+      margin: 8px 0;
+    }
+    #menuButton {
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 4px;
+    }
+    #menuButton:hover {
+      background-color: #004d99;
+    }
 
             button {
                 font-size: 0.8em;
@@ -238,31 +266,27 @@
     <section>
 	 <button id="menu-toggle" aria-label="Afficher le menu">☰ Menu</button>
     </header>
-    <nav id="side-menu" aria-label="Menu principal">
-        <ul>
-            <li><a href="#anncs">Les p’tites annonces</a></li>
-            <li><a href="#python">Python</a></li>
-            <li><a href="#javascript">JavaScript</a></li>
-            <li><a href="#java">Java</a></li>
-            <li><a href="#cpp">C++</a></li>
-            <li><a href="#php">PHP</a></li>
-            <li><a href="#ruby">Ruby</a></li>
-            <li><a href="#csharp">C#</a></li>
-            <li><a href="#go">Go</a></li>
-            <li><a href="#ctus">Contact us</a></li>
-        </ul>
-    </nav>
-    <div class="overlay" id="menu-overlay"></div>
-    <script>
-        function toggleLiens() {
-            const liens = document.getElementById('liste-liens');
-            if (liens.style.display === 'none' || liens.style.display === '') {
-                liens.style.display = 'block';
-            } else {
-                liens.style.display = 'none';
-            }
-        }
-    </script>
+   <button id="menuButton">Afficher le menu</button>
+  <nav id="menu">
+    <ul>
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">À propos</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+ <div class="overlay" id="menu-overlay"></div>
+     <script>
+    const button = document.getElementById('menuButton');
+    const menu = document.getElementById('menu');
+    button.addEventListener('click', () => {
+      // Bascule l'affichage du menu
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    });
+  </script>
     </section>
     <section id="Bienvenue">
         <button onclick ="alert('Bienvenue sur notre site Le CyberCafé ! Ici, programmation et informatique sont de mise !!! :-D');" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=350 px>Bienvenue</button>
