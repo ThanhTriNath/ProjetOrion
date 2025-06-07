@@ -219,8 +219,28 @@
             }
 
             p {
-                font-size: 0.8em;
+               font-size: 0.8em;
             }
+	/* Style mobile par défaut */
+	.menu {
+  display: block;
+}
+
+/* Pour les grands écrans (au-dessus de 768px) */
+@media (min-width: 768px) {
+  .menu {
+    display: flex;
+    justify-content: center; /* ou autre selon ton besoin */
+  }
+  .menu li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  /* Tu peux aussi cacher le bouton burger sur desktop */
+  .menu-burger {
+    display: none;
+  }
+}
 	      #menu {
       display: none;
       background-color: #f4f4f4;
