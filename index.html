@@ -236,20 +236,23 @@
 	<br/>
     </header>
     <section>
-	  <button class="btn-afficher" onclick="toggleLiens()" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=350 px>Afficher les liens</button>
-    <div id="liste-liens">
-        <a href="#Bienvenue">Bienvenue</a> |
-       <a href="#Equipe Orion"> A propos de l'équipe Orion </a> |
-	<a href="#Galerie">Galerie</a> |
-        <a href="#Services"> Services </a> |
-	<a href="#Témoignages"> Acteurs du projet </a> |
-        <a href="#Formations"> Formations </a> |
-        <a href="#Langages de programmation"> Infos programmation </a> |
-	<a href="#ContactUs"> Contactez-nous </a> |
-	<a href="#Annonces"> Rubrique annonce </a> |
-       
-    </div>
-
+	 <button id="menu-toggle" aria-label="Afficher le menu">☰ Menu</button>
+    </header>
+    <nav id="side-menu" aria-label="Menu principal">
+        <ul>
+            <li><a href="#anncs">Les p’tites annonces</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+            <li><a href="#java">Java</a></li>
+            <li><a href="#cpp">C++</a></li>
+            <li><a href="#php">PHP</a></li>
+            <li><a href="#ruby">Ruby</a></li>
+            <li><a href="#csharp">C#</a></li>
+            <li><a href="#go">Go</a></li>
+            <li><a href="#ctus">Contact us</a></li>
+        </ul>
+    </nav>
+    <div class="overlay" id="menu-overlay"></div>
     <script>
         function toggleLiens() {
             const liens = document.getElementById('liste-liens');
