@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<!DOCTYPE html>
-<html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,238 +7,382 @@
     <meta name="description" content="CyberSécurité">
     <meta name="author" content="Projet Orion">
     <title>CyberCafé</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="Orion1.jpg" type="image/jpeg">
-   <!-- Ajoute dans le <head> -->
-<style>
-    body {
-        font-family: 'Roboto', 'Trebuchet MS', sans-serif;
-        background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
-        margin: 0;
-        color: #222;
-    }
-    header {
-        background: linear-gradient(90deg, #18beab 50%, #18dc72 100%);
-        color: #fff;
-        text-align: center;
-        padding: 60px 20px 40px 20px;
-        box-shadow: 0 2px 8px rgba(24,222,178,0.2);
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-        position: relative;
-        overflow: hidden;
-    }
-    header h1 {
-        font-size: 2.5em;
-        letter-spacing: 2px;
-        margin-bottom: 10px;
-        font-weight: 700;
-    }
-    header p {
-        font-size: 1.2em;
-        font-weight: 400;
-    }
-    #menuButton {
-        background: #18beab;
-        color: #fff;
-        font-size: 1.5em;
-        border: none;
-        border-radius: 50px;
-        box-shadow: 0 2px 8px rgba(24,222,178,0.1);
-        padding: 10px 18px;
-        cursor: pointer;
-        transition: background 0.2s;
-    }
-    #menuButton:hover {
-        background: #15a698;
-    }
-    #menu {
-        background: #fff;
-        border-radius: 10px;
-        margin: 20px auto;
-        box-shadow: 0 2px 10px rgba(24,222,178,0.08);
-        width: 90%;
-        max-width: 300px;
-        display: none;
-        animation: fadeIn 0.4s;
-    }
-    #menu ul {
-        padding: 0;
-        list-style: none;
-        margin: 0;
-    }
-    #menu ul li {
-        margin: 10px 0;
-    }
-    #menu ul li a {
-        color: #18beab;
-        font-weight: 500;
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-    #menu ul li a:hover {
-        color: #18dc72;
-        text-decoration: underline;
-    }
-    section {
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 4px 24px rgba(24,222,178,0.07);
-        margin: 30px auto;
-        padding: 30px 18px;
-        max-width: 900px;
-        animation: fadeInUp 0.7s;
-    }
-    h2, h3 {
-        font-family: 'Roboto', sans-serif;
-        margin-bottom: 18px;
-    }
-    h2 {
-        color: #18beab;
-        font-size: 2em;
-        margin-top: 0;
-    }
-    h3 {
-        color: #18dc72;
-        font-size: 1.3em;
-        margin-top: 0;
-    }
-    .services, .testimonials {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: space-between;
-    }
-    .service, .testimonial {
-        background: #f8fafc;
-        border-radius: 14px;
-        box-shadow: 0 2px 8px rgba(24,222,178,0.08);
-        padding: 20px;
-        flex: 1 1 45%;
-        margin-bottom: 15px;
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .service:hover, .testimonial:hover {
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 0 6px 16px rgba(24,222,178,0.13);
-    }
-    button, .btn-afficher {
-        background: linear-gradient(90deg,#18beab 60%, #18dc72 100%);
-        color: #fff;
-        border: none;
-        border-radius: 40px;
-        padding: 12px 30px;
-        font-size: 1em;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s, transform 0.2s;
-        margin: 10px 0;
-        box-shadow: 0 2px 6px rgba(24,222,178,0.08);
-    }
-    button:hover, .btn-afficher:hover {
-        background: linear-gradient(90deg,#18dc72 60%, #18beab 100%);
-        transform: scale(1.05);
-    }
-    .Legende {
-        color: #18beab;
-        font-weight: 500;
-        font-family: 'Roboto', serif;
-        text-align: center;
-        margin-top: 10px;
-    }
-    footer {
-        background: linear-gradient(90deg,#18beab 60%, #18dc72 100%);
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-    }
-    /* Animations */
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(40px);}
-        to { opacity: 1; transform: translateY(0);}
-    }
-    /* Responsive */
-    @media (max-width: 800px) {
+    <style>
+        :root {
+            --primary: #18beab;
+            --secondary: #18dc72;
+            --accent: #224957;
+            --white: #fff;
+            --bg-gradient: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            --header-gradient: linear-gradient(90deg, #18beab 50%, #18dc72 100%);
+            --footer-gradient: linear-gradient(90deg,#18beab 60%, #18dc72 100%);
+            --shadow: 0 4px 24px rgba(24,222,178,0.10);
+            --radius: 30px;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Roboto', 'Trebuchet MS', sans-serif;
+            background: var(--bg-gradient);
+            margin: 0;
+            color: #222;
+        }
+        header {
+            background: var(--header-gradient);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 10px 30px 10px;
+            box-shadow: var(--shadow);
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-size: 3.2em;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            font-weight: 900;
+            font-family: 'Montserrat', 'Roboto', sans-serif;
+            text-shadow: 2px 3px 12px rgba(24, 190, 171, 0.14);
+        }
+        header p {
+            font-size: 1.25em;
+            font-weight: 400;
+        }
+        #menuButton {
+            background: var(--primary);
+            color: var(--white);
+            font-size: 2em;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 2px 8px rgba(24,222,178,0.13);
+            padding: 0;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            margin: 0 auto 15px auto;
+            display: block;
+            z-index: 3;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #menuButton:hover {
+            background: var(--secondary);
+            transform: scale(1.07) rotate(-2deg);
+        }
+        #menu {
+            background: var(--white);
+            border-radius: 16px;
+            margin: 16px auto 28px auto;
+            box-shadow: 0 2px 12px rgba(24,222,178,0.14);
+            width: 90%;
+            max-width: 340px;
+            display: none;
+            animation: fadeIn 0.4s;
+            z-index: 4;
+            position: relative;
+        }
+        #menu ul {
+            padding: 10px 0 10px 0;
+            list-style: none;
+            margin: 0;
+        }
+        #menu ul li {
+            margin: 12px 0;
+        }
+        #menu ul li a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            padding: 7px 0;
+            display: block;
+            border-radius: 6px;
+            transition: color 0.18s, background 0.17s;
+        }
+        #menu ul li a:hover {
+            color: var(--white);
+            background: var(--secondary);
+            text-decoration: none;
+            transform: translateX(5px) scale(1.04);
+        }
+        section {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 38px auto;
+            padding: 35px 5vw;
+            max-width: 950px;
+            animation: fadeInUp 0.7s;
+        }
+        h2, h3 {
+            font-family: 'Montserrat', 'Roboto', sans-serif;
+            margin-bottom: 18px;
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 2.1em;
+            margin-top: 0;
+            font-weight: 700;
+        }
+        h3 {
+            color: var(--secondary);
+            font-size: 1.35em;
+            margin-top: 0;
+            font-weight: 700;
+        }
         .services, .testimonials {
-            flex-direction: column;
-            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            justify-content: space-between;
         }
         .service, .testimonial {
-            flex: 1 1 100%;
+            background: #f8fafc;
+            border-radius: 18px;
+            box-shadow: 0 2px 10px rgba(24,222,178,0.09);
+            padding: 28px 24px;
+            flex: 1 1 46%;
+            margin-bottom: 18px;
+            transition: transform 0.23s, box-shadow 0.23s;
+            min-width: 260px;
+            position: relative;
         }
-    }
-</style>
+        .service:hover, .testimonial:hover {
+            transform: translateY(-8px) scale(1.03) rotate(-0.5deg);
+            box-shadow: 0 6px 24px rgba(24,222,178,0.16);
+        }
+        button, .btn-afficher {
+            background: linear-gradient(90deg,#18beab 60%, #18dc72 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.3em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.18s;
+            margin: 12px auto;
+            box-shadow: 0 2px 10px rgba(24,222,178,0.11);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button:hover, .btn-afficher:hover {
+            background: linear-gradient(90deg,#18dc72 50%, #18beab 100%);
+            transform: scale(1.07) rotate(-1deg);
+            box-shadow: 0 4px 18px rgba(24,222,178,0.18);
+        }
+        .Legende {
+            color: var(--primary);
+            font-weight: 500;
+            font-family: 'Roboto', serif;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.06em;
+            letter-spacing: 0.5px;
+        }
+        img {
+            display: block;
+            margin: 18px auto;
+            border-radius: 16px;
+            border: 2.5px solid #e0eafc;
+            max-width: 97%;
+            box-shadow: 0 4px 20px rgba(24,222,178,0.10);
+            transition: box-shadow 0.18s, transform 0.17s;
+        }
+        img:hover {
+            box-shadow: 0 8px 36px rgba(24,222,178,0.19);
+            transform: scale(1.02);
+        }
+        .responsive-link {
+            color: var(--accent);
+            font-weight: 600;
+            transition: color 0.14s;
+        }
+        .responsive-link:hover {
+            color: var(--secondary);
+        }
+        .lang-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .lang-header .lang-logo {
+            width: 38px;
+            height: 38px;
+            vertical-align: middle;
+            margin-right: 10px;
+            margin-bottom: 0;
+            border-radius: 7px;
+            box-shadow: 0 1px 5px #cfdef3;
+            background: #fff;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+        .lang-header .lang-name {
+            font-size: 1.3em;
+            color: var(--primary);
+            font-weight: 900;
+            margin: 0;
+            font-family: 'Montserrat', 'Roboto', sans-serif;
+            line-height: 1;
+        }
+        .lang-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        footer {
+            background: var(--footer-gradient);
+            color: var(--white);
+            text-align: center;
+            padding: 27px 0 16px 0;
+            border-top-left-radius: 60px;
+            border-top-right-radius: 60px;
+            margin-top: 40px;
+            font-size: 1.14em;
+            letter-spacing: 1px;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        /* Scroll to Top Button */
+        #topBtn {
+            display:none;
+            position:fixed;
+            bottom:40px;
+            right:40px;
+            z-index:99;
+            font-size:24px;
+            padding:0;
+            border:none;
+            border-radius:50%;
+            width: 58px;
+            height: 58px;
+            background: var(--accent);
+            color: var(--white);
+            cursor:pointer;
+            box-shadow: 0 2px 10px rgba(34,73,87,0.19);
+            transition: background 0.18s, transform 0.16s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #topBtn:hover {
+            background: var(--secondary);
+            transform: scale(1.10);
+        }
+        /* Responsive */
+        @media (max-width: 950px) {
+            section { padding: 35px 2vw; }
+        }
+        @media (max-width: 800px) {
+            .services, .testimonials {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .service, .testimonial {
+                flex: 1 1 100%;
+                min-width: unset;
+            }
+        }
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 10px 25px 10px;
+                border-bottom-left-radius: 37px;
+                border-bottom-right-radius: 37px;
+            }
+            section {
+                padding: 18px 7px;
+                border-radius: 12px;
+            }
+            img {
+                border-radius: 9px;
+            }
+            footer {
+                border-top-left-radius: 37px;
+                border-top-right-radius: 37px;
+                padding: 15px 0 10px 0;
+                font-size: 0.99em;
+            }
+        }
+    </style>
 </head>
 <body>
- <header>
+    <header>
         <h1>CyberCafé</h1>
         <p>Protégez votre entreprise contre les menaces numériques !</p>
-	<br/>
     </header>
     <section>
-   <button id="menuButton">☰ Menu</button>
-  <nav id="menu">
-    <ul>
-      <li><a href="#Bienvenue">Bienvenue</a></li>
-      <li><a href="#Galerie">Galerie</a></li>
-      <li><a href="#Services">Services</a></li>
-      <li><a href="#Témoignages">Les acteurs du projet</a></li>
-      <li><a href="#Formations">Nos formations</a></li>
-      <li><a href="#Annonces">Annonces</a></li>
-    </ul>
-  </nav>
- <div class="overlay" id="menu-overlay"></div>
-     <script>
-    const button = document.getElementById('menuButton');
-    const menu = document.getElementById('menu');
-    button.addEventListener('click', () => {
-      // Bascule l'affichage du menu
-      if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-      } else {
-        menu.style.display = 'block';
-      }
-    });
-  </script>
+        <button id="menuButton" aria-label="Ouvrir le menu">☰</button>
+        <nav id="menu">
+            <ul>
+                <li><a href="#Bienvenue">Bienvenue</a></li>
+                <li><a href="#Galerie">Galerie</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Témoignages">Les acteurs du projet</a></li>
+                <li><a href="#Formations">Nos formations</a></li>
+                <li><a href="#Annonces">Annonces</a></li>
+            </ul>
+        </nav>
+        <script>
+            const button = document.getElementById('menuButton');
+            const menu = document.getElementById('menu');
+            button.addEventListener('click', () => {
+                if (menu.style.display === 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
+            });
+            // Ferme le menu si on clique ailleurs
+            document.addEventListener('click', function (e) {
+                if (!menu.contains(e.target) && e.target !== button) {
+                    menu.style.display = 'none';
+                }
+            });
+        </script>
     </section>
     <section id="Bienvenue">
-        <button onclick ="alert('Bienvenue sur notre site Le CyberCafé ! Ici, programmation et informatique sont de mise !!! :-D');" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=350 px>Bienvenue</button>
+        <button onclick="alert('Bienvenue sur notre site Le CyberCafé ! Ici, programmation et informatique sont de mise !!! :-D');" style="border-style:solid;">👋</button>
     </section>
-
     <section>
         <h2 id="Equipe Orion">À propos de l'équipe Orion</h2>
         <p>
-            Notre équipe de Cyber combattants essaie de lutter tant bien que mal contre les cyber attaques. Nous utilisons le Java, le C++, nous avons un combattant spécialisé en Python 3 et des connaissances en HTML 5 ! </p>
+            Notre équipe de Cyber combattants essaie de lutter tant bien que mal contre les cyber attaques. Nous utilisons le Java, le C++, nous avons un combattant spécialisé en Python 3 et des connaissances en HTML 5 !
         </p>
     </section>
     <section>
         <h2 id="Galerie">Galerie du projet</h2>
-        <img src="Cadenas.jpeg" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=100% px/>
+        <img src="Cadenas.jpeg" alt="Logo du projet" />
         <p class="Legende"><u>Voici le design du logo de notre projet</u></p>
-        <br/>
-        <br/>
-        <img src="Design Orion.jpg" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=100% px/>
+        <img src="Design Orion.jpg" alt="Réunion d'équipe autour du logo"/>
         <p class="Legende"><u>Notre équipe se réunit autour d'un logo, celui ci-dessus !</u></p>
-        <br/>
-        <br/>
-        <img src="Langages_de_programmation_CyberSécurité.jpg" style="display:block;margin-left: auto; margin-right: auto; border-style: solid;" width=100% px/>
+        <img src="Langages_de_programmation_CyberSécurité.jpg" alt="Langages appris"/>
         <p class="Legende"><u>Voici les principaux langages que nous apprenons pour pratiquer la CyberSécurité.</u></p>
-	<br/>
-	<br/>
-	<img src="Acrostiche.jpg"style="display:block;margin-left: auto; margin-right: auto; border-style: solid;" width=100% px/>
-	<p><u>La signification réelle du nom de notre projet</u></p>    
+        <img src="Acrostiche.jpg" alt="Signification du nom Orion"/>
+        <p class="Legende"><u>La signification réelle du nom de notre projet</u></p>
     </section>
-
     <section>
         <h2 id="Services">Services</h2>
         <div class="services">
-             <div class="service">
+            <div class="service">
                 <h3>Conseils pour la sécurité sur l'Internet</h3>
                 <p>
                     Notre équipe consulte aussi pour donner des conseils aux gens pour se protéger lorsqu'ils naviguent dans l'Internet. Nous leur proposons des solutions pour qu'ils aient le plus de chance possible d'être en toute sécurité sur le web.
@@ -271,14 +411,12 @@
             </div>
         </div>
     </section>
-
     <section>
         <h2 id="Témoignages">Les acteurs du projet</h2>
         <div class="testimonials">
             <div class="testimonial">
                 <h3>Adrien D - Responsable JavaScript et C++</h3>
-                <p>Grâce à l'expertise de ce consultant, nous avons pu apprendre de nouvelles manière de contrer les cyber-attaques. Il sait faire de JavaScript et du C++.
-                </p>
+                <p>Grâce à l'expertise de ce consultant, nous avons pu apprendre de nouvelles manière de contrer les cyber-attaques. Il sait faire de JavaScript et du C++.</p>
             </div>
             <div class="testimonial">
                 <h3>Adrien L - Responsable Python 3 et formations</h3>
@@ -286,157 +424,145 @@
                     plus confiants face aux menaces actuelles. C'est notre responsable en Python à qui nous avons assigné la charge de former les nouvelles recrues. Un travail difficile qu'il exécute très aisément ! 
                 </p>
             </div>
-             <div class="testimonial">
+            <div class="testimonial">
                 <h3>Nathan L - Responsable Programmation Web</h3>
                 <p>Ce consultant s'est spécialisé dans le code HTML 5 pour vérifier les failles d'une page web. Il praitque le JavaScript, le CSS et un peu le Python 3 ! C'est lui qui est en charge de l'entretien de la page web !
                 </p>
             </div>
         </div>
     </section>
-
     <section>
         <h2 id="Formations">Nos formations</h2>
-         <div class="testimonial">
+        <div class="testimonials">
+            <div class="testimonial">
                 <h3>Flavio M - Stagiaire</h3>
-                <p>Cela ne fait pas longtemps que nous avons accueilli dans notre équipe, une nouvelle recrue, Flavio. Il est ici pour se former à des langages de programmation basiques et aux relations intérieurs et extérieurs. Il est fasciné par ce qu'il fait. Vous aussi, venez nous rejoindre !
-                </p>
-        </div>
-        <div class="testimonial">
+                <p>Cela ne fait pas longtemps que nous avons accueilli dans notre équipe, une nouvelle recrue, Flavio. Il est ici pour se former à des langages de programmation basiques et aux relations intérieurs et extérieurs. Il est fasciné par ce qu'il fait. Vous aussi, venez nous rejoindre !</p>
+            </div>
+            <div class="testimonial">
                 <h3>Mathieu M - Stagiaire</h3>
                 <p>Nous avons aussi recruté Mathieu, désireux d'apprendre à se former à la programmation. Il s'initie au Python et fait de la communication. Il aime toujours en savoir plus. Venez avec nous vous former aux langages de programmation! 
                 </p>
+            </div>
         </div>
     </section>
     <section>
         <h2 id="Langages de programmation">Les langages de programmation dont vous entendrez sûrement parler</h2>
-        <div class="testimonial">
-                <h3><u>Python</u></h3>
-                <p> Python est un langage de programmation interprété, multiparadigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet. Il est doté d'un typage dynamique fort, d'une gestion automatique de la mémoire par ramasse-miettes et d'un système de gestion d'exceptions ; il est ainsi similaire à Perl, Ruby, Scheme, Smalltalk et Tcl. Nous sommes aujourd'hui à la troisième version de Python. Nous utilisons Python pour différents aspects clés de de la CyberSécurité.
-                    <br/>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="lang-header">
+                    <img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Logo Python">
+                    <span class="lang-name">Python</span>
+                </div>
+                <p>
+                    Python est un langage de programmation interprété, multiparadigme et multiplateformes. (...)<br/>
                     Petite information : Ne pas utiliser le Python 2, car, certaines fonctions sont défectueuses.
                     Pour plus d'info, vous pouvez consulter le site : 
-                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/Python_(langage)">Wikipedia: Python</a>
+                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/Python_(langage)" target="_blank">Wikipedia: Python</a>
                 </p>
-        </div>
-        <div class="testimonial">
-                <h3><u>C++</u></h3>
-                <p> C++ est un langage de programmation qui est l'un des plus utilisé de nos jours. Il est compilé. Pour écrire un tel programme, il faut commencer par écrire un ou plusieurs fichiers source. Ensuite, il faut compiler ces fichiers source grâce à un programme appelé compilateur afin d'obtenir un programme exécutable. Cette phase s'appelle la compilation. Les fichiers source sont des fichiers texte lisibles dont le nom se termine en général par .c, .cpp ou .h. Les fichiers exécutables portent en général l'extension .exe sous windows et ne portent pas d'extension sous Linux. Il existe de très nombreux compilateurs : on peut citer par exemple Visual C++ (de microsoft), C++ Builder (de Borland), ou encore gcc qui est un excellent compilateur libre. Le langage C est un langage de programmation inventé par MM. Kernighan et Ritchie au début des années 70. Au début des années 90, Bjarne Stroustrup fait évoluer le langage vers le langage C++ en lui rajoutant notamment les notions orientées objet. Toutefois, bien que le C++ ait évolué à partir du C, et ait gardé un grand nombre de notions et de syntaxes de son «ancêtre», il s'agit de deux langages différents !
+            </div>
+            <div class="testimonial">
+                <div class="lang-header">
+                    <img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="Logo C++">
+                    <span class="lang-name">C++</span>
+                </div>
+                <p>
+                    C++ est un langage de programmation qui est l'un des plus utilisé de nos jours. (...)<br/>
                     Vous pouez consulter le site : 
-                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/C%2B%2B">Wikipedia.org:C%2B%2B</a>
-             </p>
-        </div>
-    <div class="testimonial">
-                <h3><u>HTML 5</u></h3>
-                <p> Le HTML ou Hyper Text Markup Language de son vrai nom est un langage de programmation dit "Balise". Il sert à éditer des pages web. Il en est actuellement à sa 5ème version. Cette page web est crée en HTML. En cybersécurité, il sert à trouver les failles dans une page web. Ce n'est pas un langage de programmation ! Mais, des langages de programmation tels que le PHP ou le Python peuvent créer des pages web en générant du HTML.
+                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/C%2B%2B" target="_blank">Wikipedia.org:C++</a>
+                </p>
+            </div>
+            <div class="testimonial">
+                <div class="lang-header">
+                    <img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Logo HTML5">
+                    <span class="lang-name">HTML5</span>
+                </div>
+                <p>
+                    Le HTML ou Hyper Text Markup Language de son vrai nom est un langage de programmation dit "Balise". (...)<br/>
                     Vous pouvez consulter la page wikipedia : 
-                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/HTML5">Wikipedia: HTML5</a>
-             </p>
-        </div>
-        <div class="testimonial">
-                <h3><u>JavaScript</u></h3>
-                <p> JavaScript est un langage de programmation utilisé principalement pour rendre les pages web interactives. Il est exécuté côté client (dans le navigateur web), mais il peut aussi être exécuté côté serveur (par exemple, avec Node.js).
-Voici quelques concepts clés à connaître :
-<li>Variables : Stocke des valeurs.</li>
-<li>Fonctions : Bloques de code réutilisables.</li>
-<li>Conditions : Pour effectuer des actions basées sur des tests (comme if).</li>
-<li>Boucles : Pour répéter des actions plusieurs fois (for, while).</li>
-<li>Objets : Structures de données qui contiennent des propriétés et des méthodes.</li>
+                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/HTML5" target="_blank">Wikipedia: HTML5</a>
+                </p>
+            </div>
+            <div class="testimonial">
+                <div class="lang-header">
+                    <img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Logo JavaScript">
+                    <span class="lang-name">JavaScript</span>
+                </div>
+                <p>
+                    JavaScript est un langage de programmation utilisé principalement pour rendre les pages web interactives. (...)<br/>
                     Pour plus d'info, consulter la page : 
-                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/JavaScript">Wikipedia: JavaScript</a>
-             </p>
+                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">Wikipedia: JavaScript</a>
+                </p>
+            </div>
+            <div class="testimonial">
+                <div class="lang-header">
+                    <img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="Logo PHP">
+                    <span class="lang-name">PHP</span>
+                </div>
+                <p>
+                    PHP est un langage de script HTML exécuté du côté du serveur. (...)<br/>
+                    Pour plus d'info, consulter le site :
+                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/PHP" target="_blank">Wikipedia: PHP</a>
+                </p>
+            </div>
+            <div class="testimonial">
+                <div class="lang-header">
+                    <img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Logo Java">
+                    <span class="lang-name">Java</span>
+                </div>
+                <p>
+                    Le Java c'est : 
+                    <ul>
+                        <li>Un langage : Orienté objet fortement typé avec classes</li>
+                        <li>Un environnement d’exécution (JRE) : Une machine virtuelle et un ensemble de bibliothèques</li>
+                        <li>Un environnement de développement (JDK) : Une machine virtuelle et un ensemble d’outils</li>
+                        <li>Une mascotte : Duke</li>
+                    </ul>
+                    C'est qui Java ? (...)<br/>
+                    Pour plus d'info, consulter la page : 
+                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/Java_(langage)" target="_blank">Wikipedia: Java</a>
+                </p>
+            </div>
+            <div class="testimonial">
+                <div class="lang-header">
+                    <img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Portail prog">
+                    <span class="lang-name">Portail de la programmation</span>
+                </div>
+                <p>
+                    Si vous vous intéressez à la programmation, vous pouvez consulter le portail de la programmation :
+                    <a class="responsive-link" href="https://fr.wikipedia.org/wiki/Portail:Programmation_informatique" target="_blank">Wikipedia: Programmation_informatique</a>
+                </p>
+            </div>
         </div>
-      <div class="testimonial">
-        <h3><u>PHP</u></h3>
-        <p> PHP est un langage de script HTML exécuté du côté du serveur. Il veut dire « PHP : Hypertext Preprocessor ». Sa syntaxe est largement inspirée du langage C, de Java et de Perl, avec des améliorations spécifiques. Le but du langage est d'écrire rapidement des pages HTML dynamiques. Une page php porte l'extension « .php ». Une page PHP peut être entièrement programmée en PHP ou mélangée avec du code html. PHP est un langage « Embedded HTML », c'est à dire qu'il apparaît à n'importe quel endroit de la page HTML. Pour ça on le place dans des balises particulières : <?php et ?>. On peut aussi utiliser les balises <script language="php"> et </script>. La première forme est préférable pour plus de simplicité et une compatibilité XHTML. On écrit donc une page HTML dans laquelle on intègre du code PHP.
-            Pour plus d'info, consulter le site : 
-            <a class="responsive-link" href="https://fr.wikipedia.org/wiki/PHP">Wikipedia: PHP</a>
-             </p>
-        </div>
-        <div class="testimonial">
-            <h3><u>Java</u></h3>
-            <p> Le Java c'est : 
-<li>Un langage : Orienté objet fortement typé avec classes</li>
-<li>Un environnement d’exécution (JRE) : Une machine virtuelle et un ensemble de bibliothèques</li>
-<li>Un environnement de développement (JDK) : Une machine virtuelle et un ensemble d’outils</li>
-<li>Une mascotte : Duke</li>
-            <br/>
-C'est qui Java ? 
-La plate-forme et le langage Java sont issus d’un projet de
-Sun Microsystems datant de 1990.
-Généralement, on attribut sa paternité a trois de ses ingénieurs :
-<li>James Gosling</li>
-<li>Patrick Naughton</li>
-<li>Mike Sheridan</li>
-            Pour plus d'info, consulter la page : 
-            <a class="responsive-link" href="https://fr.wikipedia.org/wiki/Java_(langage)">Wikipedia: Java</a>
-            </p>
-        </div>
-        <div class="testimonial">
-        <h3><u>Portail de la programmation</u></h3>
-        <p> Si vous vous intérressez à la programmation, vous pouvez consulter le portail de la programmation : 
-            <a class="responsive-link" href="https://fr.wikipedia.org/wiki/Portail:Programmation_informatique">Wikipedia: Programmation_informatique</a>
-             </p>
-        </div>
- </section>
-<section>
-	<h3 id="ContactUs"><u>Contactez-nous</u></h3>
-	<p>Pour nous contacter, vous pouvez nous contacter sur notre adresse e-mail, dédiée à notre projet.</p>
-	<button onclick="window.location.href='https://formsubmit.co/el/wuxamo';" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=550 px>Notre formulaire de participation au projet !</button>
-</section>
-<section>
-	<h3 id="Annonces"><u>Annonces</u></h3>
-	 <button onclick="window.location.href='https://projetorion.my.canva.site/presentation-cybercafe';" style="display:block;margin-left: auto;margin-right: auto; border-style: solid;" width=550 px>Notre projet !</button>
-	<br/>
-	<br/>
-	<p><b>Des cours de programmation donnés certains Mardis à l'Institution St Trinité pour apprendre les rudiments de l'informatique ! Venez nombreux !</b></p>
-</section>
-<section>
-      <footer>
+    </section>
+    <section>
+        <h3 id="ContactUs"><u>Contactez-nous</u></h3>
+        <p>Pour nous contacter, vous pouvez nous contacter sur notre adresse e-mail, dédiée à notre projet.</p>
+        <button onclick="window.location.href='https://formsubmit.co/el/wuxamo';" style="border-style:solid;">📬</button>
+    </section>
+    <section>
+        <h3 id="Annonces"><u>Annonces</u></h3>
+        <button onclick="window.location.href='https://projetorion.my.canva.site/presentation-cybercafe';" style="border-style:solid;">🚀</button>
+        <br/><br/>
+        <p><b>Des cours de programmation donnés certains Mardis à l'Institution St Trinité pour apprendre les rudiments de l'informatique ! Venez nombreux !</b></p>
+    </section>
+    <footer>
         <p>2025 Consultant Cybersécurité | Tous droits réservés</p>
     </footer>
-<script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const sideMenu = document.getElementById('side-menu');
-        const overlay = document.getElementById('menu-overlay');
-
-        function openMenu() {
-            sideMenu.classList.add('open');
-            overlay.classList.add('open');
-        }
-        function closeMenu() {
-            sideMenu.classList.remove('open');
-            overlay.classList.remove('open');
-        }
-        menuToggle.addEventListener('click', openMenu);
-        overlay.addEventListener('click', closeMenu);
-        // Ferme le menu si on clique sur un lien du menu
-        sideMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-        // Accessibilité : touche ESC pour fermer le menu
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape") closeMenu();
-        });
-    </script>
     <!-- Bouton retour en haut -->
-<button id="topBtn" title="Retour en haut" style="display:none;position:fixed;bottom:40px;right:40px;z-index:99;font-size:24px;padding:10px 15px;border:none;border-radius:50%;background:#222;color:#fff;cursor:pointer;">
-    &#8679;
+    <button id="topBtn" title="Retour en haut">&#8679;</button>
     <script>
-  // Afficher le bouton quand on descend
-  window.onscroll = function() {
-    const btn = document.getElementById("topBtn");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
-
-  // Remonter en haut quand on clique
-  document.getElementById("topBtn").onclick = function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  };
-</script>
-</button>
+        // Bouton retour en haut
+        window.onscroll = function() {
+            const btn = document.getElementById("topBtn");
+            if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+        document.getElementById("topBtn").onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
 </body>
 </html>
